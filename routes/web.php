@@ -17,6 +17,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/search','HomeController@search');
 Route::get('/pagination/fetch_data', 'HomeController@fetch_data');
+Route::get('/customer', 'HomeController@customer')->middleware('customer');
+Route::get('/agent', 'HomeController@agent')->middleware('agent');
+Route::get('/admin', 'HomeController@admin')->middleware('admin');
 /*Route::get('/search/data', 'HomeController@fetch_data');*/
+
 
 

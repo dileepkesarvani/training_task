@@ -61,6 +61,19 @@
                             </div>
                         </div>
 
+                        <!-- role start -->
+                        <div class="form-group row">
+                         <label for="role" class="col-md-4 col-form-label text-md-right">Role</label>
+                          <div class="col-md-6">
+                            <select name="role" class="form-control" >
+                                <option value="admin">Admin</option>
+                                <option value="agent">Agent</option>
+                                <option value="customer">Customer</option>
+                           </select> 
+                      </div>
+                  </div>
+                        <!-- role  end -->
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

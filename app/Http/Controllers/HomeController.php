@@ -77,7 +77,18 @@ class HomeController extends Controller
             }
         }
     }*/
-
+public function customer()
+{
+  return view('customer');
+}
+public function  admin()
+{
+  return view('admin');
+}
+public function  agent()
+{
+  return view('agent');
+}
     
 
     
