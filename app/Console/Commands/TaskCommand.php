@@ -3,6 +3,9 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Hash;
+use DB;
+use App\User;
 
 class TaskCommand extends Command
 {
@@ -11,14 +14,14 @@ class TaskCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'Task:Command';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'User Registered Successful';
 
     /**
      * Create a new command instance.
@@ -38,5 +41,5 @@ class TaskCommand extends Command
     public function handle()
     {
         //
-    }
+            }
 }

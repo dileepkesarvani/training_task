@@ -27,7 +27,7 @@ class Customer
         {
             return redirect('/agent');
         }
-        elseq{
+        else{
             return redirect('/admin');
         }
     }

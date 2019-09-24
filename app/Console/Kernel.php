@@ -2,6 +2,8 @@
 
 namespace App\Console;
 use DB;
+use Hash;
+use App\User;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,6 +16,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\LogDemo::class,
+        Commands\TaskCommand::class,
+        Commands\UserCreate::class,
     ];
 
     /**
@@ -25,6 +29,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('Log:Demo')->everyMinute();
+        $schedule->command('user:create')->everyMinute();
         
     }
 
