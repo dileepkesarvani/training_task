@@ -22,5 +22,8 @@ Route::get('/agent', 'HomeController@agent')->middleware('agent');
 Route::get('/admin', 'HomeController@admin')->middleware('admin');
 /*Route::get('/search/data', 'HomeController@fetch_data');*/
 
+Route::get('/','FileController@file');
+Route::post('/store','FileController@store')->name('file.store');
+
 
 

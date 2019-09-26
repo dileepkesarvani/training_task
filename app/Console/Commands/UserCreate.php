@@ -42,12 +42,11 @@ class UserCreate extends Command
     {
         $input['name'] = $this->ask('What is your Name?');
         $input['email'] = $this->ask('What is your Email?');
-        $input['password'] = $this->secret('What is your Name?');
+        $input['password'] = $this->secret('What is your password secret?');
         $input['password'] = Hash::make($input['password']);
         $input['role'] = $this->ask('What is your Role? like admin, customer,agent');
 
         DB::table('users')->insert($input);
         $this->info('User Create Successfully');
-
     }
 }
