@@ -34,5 +34,7 @@ class DoHeavyStuff implements ShouldQueue
     {
         $image = Image::make(public_path($this->file));
         $image = $request->file->move(public_path('img'));
+        $image->$this->request->Route( 'POST','http://127.0.0.1:8000/api/store','FileController@store', 'json'   );
+
     }
 }

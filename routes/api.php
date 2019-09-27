@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,10 @@ use Illuminate\Http\Request;
 */
 
 
-  
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
 	return $request->user();
+
 });
 	Route::post('/products', 'API\ProductController@store');
 	Route::get('show', 'API\ProductController@index');
@@ -29,3 +31,5 @@ Route::post('register', 'API\PassportController@register');
 Route::group(['middleware' => 'auth:api'], function(){
 Route::post('get-details', 'API\PassportController@getDetails');
 });
+Route::get('/','FileController@file');
+Route::post('/store','FileController@store')->name('file.store');
